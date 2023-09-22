@@ -1,9 +1,9 @@
 //Global Variables
-int appWidth, appHeight, size;
-String title="WAHOO!!", footer="drip";;
+int appWidth, appHeight;
+String title="WAHOO!!", footer="drip";
 PFont titleFont, footerFont;
-color blue=#0A87A5, purple=#7F35C1, resetDefaultInk=#FFFFFF;
-int sizeFont;
+color blue=#0A87A5, purple=#7F35C1, resetDefaultInk=#FFFFFF; 
+int sizeFont, size;
 float xTitle, yTitle, widthTitle, heightTitle;
 float xFooter, yFooter, widthFooter, heightFooter;
 //
@@ -13,7 +13,7 @@ void setup() {
   appWidth = width;
   appHeight = height;
   //
-  // Population//
+  // Population
   xTitle = appWidth*1/4;
   yTitle = appHeight*1/10;
   widthTitle = appWidth*1/2;
@@ -22,6 +22,7 @@ void setup() {
   yFooter = appHeight*7/10;
   widthFooter = widthTitle;
   heightFooter = heightTitle;
+  //
   // DIVs or rect()
   //Layout our text space and typographical features
   rect( xTitle, yTitle, widthTitle, heightTitle); //Title: WAHOO!!
@@ -31,8 +32,8 @@ void setup() {
   // Fonts from OS (Operating System)
   String[] fontList = PFont.list(); //Lists all fonts available on OS
   printArray(fontList);
-  titleFont = createFont("Vivaldii", 55);
-  footerFont = createFont("Sylfaen", 55); //Verify the fonts exist in Processing
+  titleFont = createFont("Mistral", 55);
+  footerFont = createFont("Sylfaen", 55); 
   // Tools / Create Font / Find Font / Do not press "OK", Known bug
 } //End setup
 //
@@ -40,6 +41,7 @@ void draw() {
   //Text is the same size or relative to rect()
   //
   //Drawing Font Code
+  //
   fill(blue); //ink
   textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
