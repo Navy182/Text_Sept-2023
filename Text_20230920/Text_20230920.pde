@@ -1,8 +1,8 @@
 //Global Variables
-int appWidth, appHeight;
-String title, footer;
+int appWidth, appHeight, size;
+String title="WAHOO!!", footer="drip";;
 PFont titleFont, footerFont;
-color blue=#0A87A5, resetDefaultInk=#FFFFFF;
+color blue=#0A87A5, purple=#7F35C1, resetDefaultInk=#FFFFFF;
 int sizeFont;
 float xTitle, yTitle, widthTitle, heightTitle;
 float xFooter, yFooter, widthFooter, heightFooter;
@@ -31,8 +31,8 @@ void setup() {
   // Fonts from OS (Operating System)
   String[] fontList = PFont.list(); //Lists all fonts available on OS
   printArray(fontList);
-  titleFont = createFont("MVBoli", 55);
-  footerFont = createFont("Verdana-Italic", 55); //Verify the fonts exist in Processing
+  titleFont = createFont("Vivaldii", 55);
+  footerFont = createFont("Sylfaen", 55); //Verify the fonts exist in Processing
   // Tools / Create Font / Find Font / Do not press "OK", Known bug
 } //End setup
 //
@@ -40,12 +40,17 @@ void draw() {
   //Text is the same size or relative to rect()
   //
   //Drawing Font Code
-  fill(blue);
-  textAlign(CENTER< CENTER);
+  fill(blue); //ink
+  textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
-  size = 10;
-  textFont (titleFont, size);
-  text();
+  size = 35;
+  textFont(titleFont, size);
+  text(title, xTitle, yTitle, widthTitle, heightTitle );
+  fill(purple); //ink
+  textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+  //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+  textFont(footerFont, size);
+  text(footer, xFooter, yFooter, widthFooter, heightFooter );
   //
   //
 //rect(xTitle, yTitle, widthTitle, heightTitle); //Title: WAHOO!!
